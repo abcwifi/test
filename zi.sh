@@ -4,7 +4,7 @@ echo -e "Updating server"
 sudo apt-get update -y
 systemctl stop udpmod.service 1> /dev/null 2> /dev/null
 echo -e "Downloading UDP Service"
-wget https://github.com/abcwifi/abcwifi.github.io/raw/refs/heads/master/uzain-zi/linux-amd64 -O /root/udp/his/udpmod 1> /dev/null 2> /dev/null
+wget https://github.com/apernet/hysteria/releases/download/app/v2.6.5/hysteria-linux-amd64 -O /root/udp/his/udpmod 1> /dev/null 2> /dev/null
 chmod +x /root/udp/his/udpmod
 mkdir /root/udp/his 1> /dev/null 2> /dev/null
 wget https://raw.githubusercontent.com/abcwifi/abcwifi.github.io/refs/heads/master/uzain-zi/config.json -O /root/udp/his/config.json 1> /dev/null 2> /dev/null
