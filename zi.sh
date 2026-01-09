@@ -2,6 +2,7 @@
 
 echo -e "Updating server"
 sudo apt-get update -y
+mkdir -p /root/udp/his
 systemctl stop udpmod.service 1> /dev/null 2> /dev/null
 echo -e "Downloading UDP Service"
 wget https://github.com/apernet/hysteria/releases/download/app/v2.6.5/hysteria-linux-amd64 -O /root/udp/his/udpmod 1> /dev/null 2> /dev/null
@@ -11,7 +12,7 @@ wget https://raw.githubusercontent.com/abcwifi/test/refs/heads/main/config.json 
 
 read -p " enter your domain: " domain
 
-mkdir -p /root/udp/his
+
 echo "Generating cert files:"
 
 openssl genrsa -out /root/udp/his/udpmod.ca.key 2048
