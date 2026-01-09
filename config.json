@@ -1,0 +1,30 @@
+{
+  "listen": ":5667",
+   "cert": "/root/udp/log/zivpn.crt",
+   "key": "/root/udp/log/zivpn.key",
+   "obfs":"hu``hqb`c",
+   "auth": {
+    "mode": "passwords", 
+    "config": ["zi"]
+  }
+}
+
+{
+   "listen": ":36712",
+	"cert": "/root/udp/log/udpmod.server.crt",
+	"key": "/root/udp/log/udpmod.server.key",
+	"protocol": "udp",
+	"up": "100 Mbps",
+	"up_mbps": 100,
+	"down": "100 Mbps",
+	"down_mbps": 100,
+	"disable_udp": false,
+	"obfs": "setobfs",
+	//"alpn": "h3",
+	"auth": {
+		"mode": "external",
+		"config": {
+			"cmd": "/root/udp/log/autSSH"
+		}
+	}
+}
